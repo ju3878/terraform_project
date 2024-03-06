@@ -72,7 +72,7 @@ resource "aws_eip" "aws03-eip" {
   }
 }
 
-// NAT 게이트웨이
+// NAT 게이트웨이 private > public 변환해서 인터넷으로 나감
 resource "aws_nat_gateway" "aws03-nat" {
   allocation_id = aws_eip.aws03-eip.id
   subnet_id     = aws_subnet.aws03-public-subnet-2a.id
