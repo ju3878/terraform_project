@@ -87,7 +87,7 @@ resource "aws_nat_gateway" "aws03-nat" {
   }
 }
 
-// 라우터 // public 1개 private 2개 
+// 라우터 // public 2개 private 1개 
 // public router table
 resource "aws_default_route_table" "aws03-public-rt-table" {
   default_route_table_id = aws_vpc.aws03-vpc.default_route_table_id
