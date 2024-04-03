@@ -2,7 +2,8 @@ resource "aws_instance" "jenkins" {
     ami                         = "ami-0d3d9b94632ba1e57"
     instance_type               = "t3.large"
     key_name                    = "project01-key"
-    private_ip                  = "10.1.64.100"
+    // private_ip                  = "10.1.64.100"
+    private_ip                  = "10.1.32.100"
     security_groups = [data.terraform_remote_state.security_group.outputs.ssh_id,
                        data.terraform_remote_state.security_group.outputs.http_id, 
                        data.terraform_remote_state.security_group.outputs.https_id]
