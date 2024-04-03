@@ -3,7 +3,7 @@ output "private_ip" {
     value       = aws_instance.jenkins.private_ip
 }
 output "jenkins_id" {
-    description = "The IP of the Jenkins"
+    description = "The ID of the Instance"
     value       = aws_instance.jenkins.id
 }
 
