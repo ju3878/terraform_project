@@ -1,4 +1,5 @@
-data "terraform_remote_state" "vpc" {
+
+/* data "terraform_remote_state" "vpc" {
     backend = "s3"
     config = {
         bucket = "project01-terraform-state"
@@ -6,6 +7,8 @@ data "terraform_remote_state" "vpc" {
         region = "ap-northeast-2"
     }
 }
+*/
+
 data "terraform_remote_state" "subnets" {
     backend = "s3"
     config = {
