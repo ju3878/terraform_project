@@ -5,8 +5,9 @@ resource "aws_instance" "jenkins" {
     // private_ip                  = "10.1.64.100"
     private_ip                  = "10.1.32.100"
     security_groups = [data.terraform_remote_state.security_group.outputs.ssh_id,
-                       data.terraform_remote_state.security_group.outputs.http_id, 
-                       data.terraform_remote_state.security_group.outputs.https_id]
+                       data.terraform_remote_state.security_group.outputs.jenkins_id]
+//                       data.terraform_remote_state.security_group.outputs.http_id, 
+//                       data.terraform_remote_state.security_group.outputs.https_id]
                        
     // 보안그룹 연결 // remote
     subnet_id = data.terraform_remote_state.subnets.outputs.private-subnet-2a-id
